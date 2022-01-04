@@ -48,6 +48,20 @@ html {
     color: seashell;
 }
 
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: seashell;
+}
+
 /* Mission section */
 #mission {
     background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-mission-background.jpg");
@@ -148,6 +162,61 @@ footer {
 }
 
 /* Media queries */
+@media only screen and (max-width: 640px) {
+    .primarynavitem {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .primarynavitem.active {
+        left: 0;
+    }
+
+    .primarynavitem li {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    .missionoverlay h4 {
+        font-size: 15px;
+    }
+
+    .locationcontainer {
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .locationitem {
+        width: 300px;
+        height: 300px;
+        margin-bottom: 15px;
+    }
+
+    #locations {
+        height: 930px;
+        background-size: 1250px;
+    }
+
+    footer {
+        font-size: 15px;
+        text-align: center;
+    }
+}
 
 @media only screen and (max-width:750px) {
     li {
@@ -182,3 +251,4 @@ footer {
         gap: 1rem;
     }
 }
+
